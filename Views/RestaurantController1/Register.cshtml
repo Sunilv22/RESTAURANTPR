@@ -1,0 +1,23 @@
+﻿@model RESTAURANTPROJ.Models.Registration
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>welcome to Register</h2>
+<br/>
+<body>
+    <div>
+       <form method="post">
+                   <label>Name</label> <input type="text" asp-for=Username class="form-control" /><br/>
+                   <label>password</label> <input type="text" asp-for=Password class="form-control" /><br/>
+                   <label>Mobile</label><input type="text" asp-for=Mobile class="form-control"  /><br/>
+                    <label>Email</label><input type="text" asp-for=Email class="form-control" /><br/>
+                    
+                    <input type="submit" value="Register" /><br/> <a asp-controller="RestaurantController1" asp-action="Login">Login</a>
+       
+ @ViewData["reg"]
+ </form>
+
+</body>

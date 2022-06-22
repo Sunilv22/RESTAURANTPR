@@ -1,0 +1,19 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post">
+    <label>Username</label><br />
+   
+    <input type="text" name="Username" class="form-control" /> <br />
+
+    <label>Enter Password</label><br />
+    <input type="password" name="Password" class="form-control"/> <br />
+
+   <input type="submit" value="Login" class="btn btn-info" style="background-color:green;color:white"  />
+   <a asp-controller="RestaurantController1" asp-action="Register">NEW user Register</a>
+   
+   @ViewData["msg"]
+</form>

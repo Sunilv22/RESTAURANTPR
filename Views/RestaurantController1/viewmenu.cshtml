@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RESTAURANTPROJ.Models.Menu>;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<p><b>Items in Menu Card...</b></p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("ItemNo")
+        </th>
+        <th>
+            @Html.DisplayName("Menu")
+        </th>
+        <th>
+            @Html.DisplayName("Price")
+        </th>
+        <th>
+            @Html.DisplayName("Order Here")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Itemno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menu1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            
+            <td>
+               <a asp-action="OrderFood" asp-route-Itemno=@item.Itemno asp-route-Menu1=@item.Menu1 asp-route-price=@item.Price class="btn btn-primary">Ordernow</a>
+            </td>
+           
+        </tr>
+    }
+
+</table>
